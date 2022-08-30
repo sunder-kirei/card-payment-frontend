@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  font-size: 18px;
+}
+
+.card-front {
+  position: relative;
+  width: fit-content;
+  top: -86vh;
+  /* top: -36rem; */
+  left: 10vw;
+  /* left: 150px; */
+}
+
+.circles {
+  position: relative;
+  bottom: 95px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+
+.big-circle {
+  background-color: white;
+  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.small-circle {
+  border: 1px solid white;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.card-front > figcaption {
+  width: 100%;
+  padding-inline: 30px;
+}
+
+.card-front > figcaption {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+}
+
+.card-front > figcaption > .card-details {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+}
+
+.card-front > figcaption > .card-number {
+  letter-spacing: 0.2em;
+  position: relative;
+  top: -30px;
+  font-size: 25px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+main > .background-image {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  position: relative;
+  width: fit-content;
+  top: -82vh;
+  /* top: -620px; */
+  left: 16vw;
+  /* left: 250px; */
+}
+
+.card-back > figcaption {
+  color: white;
+  position: absolute;
+  right: 40px;
+  bottom: 120px;
+  padding-inline-end: 20px;
+  letter-spacing: 0.1em;
+}
+
+figure > img {
+  filter: drop-shadow(0px 0px 5px hsla(270, 3%, 87%, 0.4));
+}
+
+.form-container {
+  width: 26vw;
+  /* width: 400px; */
+  position: absolute;
+  right: 13vw;
+  /* right: 200px; */
+  top: 25vh;
+  /* top: 25%; */
+}
+
+label {
+  color: hsl(278, 68%, 11%);
+  letter-spacing: 0em;
+  width: 100%;
+  /* border: 1px solid black; */
+  word-spacing: 0.2em;
+}
+
+.divider > label {
+  display: flex;
+  justify-content: space-between;
+}
+
+label > span {
+  width: 50%;
+  /* border: 1px solid brown; */
+}
+
+input,
+button {
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 0px 2px hsl(270, 3%, 87%);
+  padding: 15px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+input:focus {
+  border: 3px solid hsl(278, 69%, 27%);
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+form > input {
+  height: 60px;
+  color: hsl(270, 3%, 87%);
+  background-color: hsl(278, 68%, 11%);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.wrapper > span {
+  width: 50%;
+}
+
+.expiry > input {
+  max-width: 40%;
+  margin-right: 5%;
+}
+
+form > div {
+  margin-block-end: 30px;
+}
+
+input[type="submit"] {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-front {
+    position: relative;
+    width: fit-content;
+    top: -26vh;
+    z-index: 10;
+    /* top: -36rem; */
+    left: 15vw;
+    /* left: 150px; */
+  }
+  .form-container {
+    width: 80vw;
+    max-width: 400px;
+    position: absolute;
+    right: 10vw;
+    /* right: 200px; */
+    top: 45vh;
+    /* top: 25%; */
+  }
+  .completed {
+    width: 80vw;
+    max-width: 400px;
+    position: absolute;
+    right: 10vw;
+    /* right: 200px; */
+    top: 45vh;
+    /* top: 25%; */
+  }
+  .card-back {
+    position: relative;
+    width: fit-content;
+    top: -69vh;
+    /* top: -620px; */
+    left: 30vw;
+    /* left: 250px; */
+  }
+  main > .background-image {
+    width: 100%;
+    height: 35%;
+    object-fit: cover;
+  }
+}
+.completed {
+  /* border: 1px solid black; */
+  width: 26vw;
+  /* width: 400px; */
+  position: absolute;
+  right: 13vw;
+  /* right: 200px; */
+  top: 25vh;
+  /* top: 25%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+button {
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(270, 3%, 87%);
+  margin-top: 30px;
+}
+
+.completed > span {
+  opacity: 0.5;
+  letter-spacing: 0.05rem;
+}
+
+.completed > img {
+  margin-bottom: 20px;
+}
+
+p {
+  position: absolute;
+  top: 40vh;
+  right: 13vw;
 }
