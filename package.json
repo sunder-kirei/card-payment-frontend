@@ -1,6 +1,6 @@
 {
   "name": "card-payment-form",
-  "homepage": "https://github.com/sunder-kirei/card-payment-frontend.git",
+  "homepage": "https://sunder-kirei.github.io/card-payment-frontend/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
