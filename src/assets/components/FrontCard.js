@@ -2,7 +2,6 @@ import React from "react";
 import frontCardImg from "../images/bg-card-front.png";
 
 function FrontCard(props) {
-  console.log(props.data.cardNumber);
   return (
     <figure className="card-front">
       <img src={frontCardImg} alt="card-front" id="card-front" />

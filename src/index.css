@@ -246,6 +246,9 @@ button {
   background-color: hsl(278, 68%, 11%);
   color: hsl(270, 3%, 87%);
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .completed > span {
@@ -258,7 +261,20 @@ button {
 }
 
 p {
-  position: absolute;
-  top: 40vh;
-  right: 13vw;
+  color: hsl(0, 100%, 66%);
+}
+
+.errors {
+  width: 100%;
+  display: flex;
+}
+
+.errors > p:nth-child(1) {
+  flex: 0.9;
+}
+.errors > p:nth-child(2) {
+  flex: 1.1;
+}
+.errors > p:nth-child(3) {
+  flex: 2;
 }

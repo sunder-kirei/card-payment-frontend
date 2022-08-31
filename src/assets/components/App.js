@@ -16,6 +16,7 @@ function App() {
   });
 
   function capitalize(string) {
+    string = string.replace(/[0-9]/g, "");
     let newString = "";
     for (let i = 0; i < string.length; i++) {
       if (i == 0 || (i > 0 && string[i - 1] === " ")) {
@@ -39,7 +40,7 @@ function App() {
     if (parts.length) {
       return parts.join(" ");
     } else {
-      return string;
+      return v;
     }
   }
 
